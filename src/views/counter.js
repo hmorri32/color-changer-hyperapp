@@ -9,7 +9,7 @@ export default (state, msg) => (
     <section>
       <button
         class="sub"
-        onclick={msg.rando}
+        onclick={msg.newNumber}
       >
       {updateBackground(state)}
       COLOR
