@@ -1,24 +1,18 @@
 import { h } from 'hyperapp';
 
+function updateBackground(state) {
+  document.body.style = `background: ${state.color}`;
+}
+
 export default (state, msg) => (
   <div class="counter">
-    <h1>hyperapp-one</h1>
-    <p><em>With JSX and Webpack</em></p>
-    <hr />
     <section>
       <button
         class="sub"
-        onclick={msg.sub}
-        disabled={state.num < 1}
+        onclick={msg.rando}
       >
-        -
-      </button>
-      <h1 class='count'>{state.num}</h1>
-      <button
-        class="add"
-        onclick={msg.add}
-      >
-        +
+      {updateBackground(state)}
+      COLOR
       </button>
     </section>
   </div>
